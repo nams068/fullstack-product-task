@@ -49,6 +49,7 @@ ProductTask/
 3. Veritabanı (MSSQL)
    Ayrı bir veritabanı kurmanıza gerek yoktur.
    appsettings.json içinde MSSQL bağlantısı hazır tanımlıdır.
+   Connection String bağlantısını kendinize göre değiştirebilirsiniz.
    İlk çalıştırmada Entity Framework migration’ları kullanarak veritabanını otomatik oluşturur.
    Eğer manuel olarak kurmak isterseniz:
    dotnet ef database update
@@ -80,7 +81,7 @@ Projede sonradan eklediğimiz image kolonunu da migration içinde bulabilirsiniz
    npm install
    ```
 
-3. `.env` dosyasını oluşturun ve backend API adresini yazın:
+3. Frontend klasörü altına `.env` dosyasını oluşturun ve backend API adresini yazın:
 
    ```env
    NEXT_PUBLIC_API_URL=https://localhost:5001
@@ -132,5 +133,6 @@ Swagger – API dokümantasyonu ve test.
 - Kurulum için ister `git clone` ister `Download ZIP` yöntemi kullanılabilir.
 
 Backend ve frontend birlikte ayağa kaldırıldığında sistemin uçtan uca çalışması test edilebilir.
+
 
 
