@@ -11,24 +11,27 @@ namespace ProductApi.Controllers
     {
         private readonly AppDbContext _context;
 
+        // DB bağlantısı için context kullanılıyor
         public ProductsController(AppDbContext context)
         {
             _context = context;
         }
 
-        // GET: api/products
+        // Tüm ürünleri listeler
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Product>>> GetProducts()
         {
             return await _context.Products.ToListAsync();
         }
 
-        // POST: api/products
+        // Yeni ürün ekler
         [HttpPost]
         public async Task<ActionResult<Product>> CreateProduct([FromBody] Product product)
         {
             _context.Products.Add(product);
             await _context.SaveChangesAsync();
+
+            // Yeni eklenen ürünü döndürür
             return CreatedAtAction(nameof(GetProducts), new { id = product.Id }, product);
         }
 

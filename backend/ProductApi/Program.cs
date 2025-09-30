@@ -11,7 +11,7 @@ builder.Services.AddSwaggerGen(); // Swagger
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
-// ----------------- CORS EKLE -----------------
+// ----------------- CORS EKLENDİ -----------------
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowAll",
@@ -40,6 +40,6 @@ app.UseCors("AllowAll"); // <-- CORS middleware
 
 app.UseAuthorization();
 
-app.MapControllers(); // Controller endpointlerini kullan
+app.MapControllers(); // Controller endpointlerini kullandım.
 
 app.Run();
