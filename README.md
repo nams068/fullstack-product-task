@@ -12,18 +12,9 @@ Bu proje, backend tarafında ürün ekleme ve listeleme yapılabilen bir .NET AP
 
 ---
 
-## ⚙️ Kurulum Yöntemleri
+## ⚙️ Kurulum Yöntemi
 
-Projeyi kendi bilgisayarınıza iki yöntemle kurabilirsiniz:
-
-### 1. Git clone ile kurulum
-
-1. Depoyu bilgisayarınıza indirin:
-
-   git clone https://github.com/<kullanici-adi>/<repo-adi>.git
-   cd <repo-adi>
-
-### 2. ZIP indirerek kurulum
+ ZIP indirerek kurulum
 
 1. GitHub sayfasından **Code → Download ZIP** seçeneğini tıklayın.
 2. ZIP dosyasını açın.
@@ -46,6 +37,7 @@ ProductTask/
 
    ```bash
    cd backend
+   cd ProductApi
    ```
 
 2. Bağımlılıkları yükleyin:
@@ -140,4 +132,5 @@ Swagger – API dokümantasyonu ve test.
 - Kurulum için ister `git clone` ister `Download ZIP` yöntemi kullanılabilir.
 
 Backend ve frontend birlikte ayağa kaldırıldığında sistemin uçtan uca çalışması test edilebilir.
+
 
